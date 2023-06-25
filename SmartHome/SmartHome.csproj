@@ -1,0 +1,634 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C86D0F7A-13C4-455C-8182-27818B4950C8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartHome</RootNamespace>
+    <AssemblyName>SmartHome</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells">
+      <HintPath>E:\Study\项目\4.定陶掌静脉认证\V2.8\KSRZ\KSRZ\bin\Debug\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="backup\default.aspx" />
+    <Content Include="backup\default1.aspx" />
+    <Content Include="bigscreen.aspx" />
+    <Content Include="carCheck.aspx" />
+    <Content Include="CarException.aspx" />
+    <Content Include="carMaintain.aspx" />
+    <Content Include="carManage.aspx" />
+    <Content Include="carMaphistory.aspx" />
+    <Content Include="carOil.aspx" />
+    <Content Include="carReturn.aspx" />
+    <Content Include="css\bootstrap-3.3.7.min.css" />
+    <Content Include="css\feetback.css" />
+    <Content Include="css\index.css" />
+    <Content Include="css\stations.css" />
+    <Content Include="css\warning.css" />
+    <Content Include="css\zTreeStyle\img\diy\1_close.png" />
+    <Content Include="css\zTreeStyle\img\diy\1_open.png" />
+    <Content Include="css\zTreeStyle\img\diy\2.png" />
+    <Content Include="css\zTreeStyle\img\diy\3.png" />
+    <Content Include="css\zTreeStyle\img\diy\4.png" />
+    <Content Include="css\zTreeStyle\img\diy\5.png" />
+    <Content Include="css\zTreeStyle\img\diy\6.png" />
+    <Content Include="css\zTreeStyle\img\diy\7.png" />
+    <Content Include="css\zTreeStyle\img\diy\8.png" />
+    <Content Include="css\zTreeStyle\img\diy\9.png" />
+    <Content Include="css\zTreeStyle\img\line_conn.gif" />
+    <Content Include="css\zTreeStyle\img\loading.gif" />
+    <Content Include="css\zTreeStyle\img\zTreeStandard.gif" />
+    <Content Include="css\zTreeStyle\img\zTreeStandard.png" />
+    <Content Include="css\zTreeStyle\zTreeStyle.css" />
+    <Content Include="depManage.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="backup\index1.html" />
+    <Content Include="h5carcheck.aspx" />
+    <Content Include="h5carmanage.aspx" />
+    <Content Include="h5carorderlist.aspx" />
+    <Content Include="h5index.aspx" />
+    <Content Include="h5login.html" />
+    <Content Include="imgHospital\brt.jpg" />
+    <Content Include="imgHospital\chagang.jpg" />
+    <Content Include="imgHospital\gzer.jpg" />
+    <Content Include="imgHospital\hdgsm.jpg" />
+    <Content Include="imgHospital\hjrner.jpg" />
+    <Content Include="imgHospital\jbhlt.jpg" />
+    <Content Include="imgHospital\sd.jpg" />
+    <Content Include="imgHospital\wberbl.jpg" />
+    <Content Include="imgHospital\xblgsm.jpg" />
+    <Content Include="imgHospital\xilin.jpg" />
+    <Content Include="imgHospital\zhengfu.jpg" />
+    <Content Include="img\baonew.png" />
+    <Content Include="img\baonew1.png" />
+    <Content Include="img\car.png" />
+    <Content Include="img\hospital.png" />
+    <Content Include="img\hospitalnew.png" />
+    <Content Include="img\hospitalnews.png" />
+    <Content Include="img\m_grey.png" />
+    <Content Include="img\m_puple.png" />
+    <Content Include="img\m_red.png" />
+    <Content Include="img\warn.mp3" />
+    <Content Include="img\warn.png" />
+    <Content Include="img\warn50.png" />
+    <Content Include="img\warnblack.png" />
+    <Content Include="img\xyxblue.png" />
+    <Content Include="img\xyxblues.png" />
+    <Content Include="img\xyxgreen.png" />
+    <Content Include="img\xyxgreens.png" />
+    <Content Include="img\xyxorange.png" />
+    <Content Include="img\xyxoranges.png" />
+    <Content Include="img\xyxpink.png" />
+    <Content Include="img\xyxpinks.png" />
+    <Content Include="img\xyxpurple.png" />
+    <Content Include="img\xyxpurples.png" />
+    <Content Include="img\xyxred.png" />
+    <Content Include="img\xyxreds.png" />
+    <Content Include="img\xyxwhite.png" />
+    <Content Include="img\xyxwhites.png" />
+    <Content Include="img\xyxyellow.png" />
+    <Content Include="img\xyxyellows.png" />
+    <Content Include="index.aspx" />
+    <Content Include="js\bootstrap-3.3.7.min.js" />
+    <Content Include="js\carCheck.js" />
+    <Content Include="js\carMaintain.js" />
+    <Content Include="js\carManage.js" />
+    <Content Include="js\carOil.js" />
+    <Content Include="js\carReturn.js" />
+    <Content Include="js\depManage.js" />
+    <Content Include="js\feetbackdisplayornot1.js" />
+    <Content Include="js\feetbackdisplayornot.js" />
+    <Content Include="js\h5carcheck.js" />
+    <Content Include="js\h5carmanage.js" />
+    <Content Include="js\h5carorderlist.js" />
+    <Content Include="js\h5feetbackdisplayornot.js" />
+    <Content Include="js\jquery-1.12.4.min.js" />
+    <Content Include="js\jquery.flot.time.js" />
+    <Content Include="js\jquery.ztree.core.js" />
+    <Content Include="js\mbManage.js" />
+    <Content Include="js\personManage.js" />
+    <Content Include="js\timeout2login.js" />
+    <Content Include="js\trackManage.js" />
+    <Content Include="js\userManager.js" />
+    <Content Include="js\warning.js" />
+    <Content Include="map.aspx" />
+    <Content Include="maphistory.aspx" />
+    <Content Include="mbManage.aspx" />
+    <Content Include="personManage.aspx" />
+    <Content Include="stations.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="img\Descr.WD3" />
+    <Content Include="img\gallery\Descr.WD3" />
+    <Content Include="img\demo\Descr.WD3" />
+    <Content Include="font-awesome\css\Descr.WD3" />
+    <Content Include="font-awesome\font\Descr.WD3" />
+    <Content Include="font-awesome\font\fontawesome-webfont.eot" />
+    <Content Include="font-awesome\font\fontawesome-webfont.eot%40" />
+    <Content Include="font-awesome\font\fontawesome-webfont.ttf" />
+    <Content Include="font-awesome\font\fontawesome-webfont.woff" />
+    <Content Include="images\backgrounds\blank2" />
+    <Content Include="images\backgrounds\Descr.WD3" />
+    <Content Include="images\backgrounds\skype_3Asuniljoshi19%40call" />
+    <Content Include="index.ashx" />
+    <Content Include="map.ashx" />
+    <Content Include="login.ashx" />
+    <Content Include="personManage.ashx" />
+    <Content Include="depManage.ashx" />
+    <Content Include="carMaintain.ashx" />
+    <Content Include="carManage.ashx" />
+    <Content Include="CarException.ashx" />
+    <Content Include="carOil.ashx" />
+    <Content Include="carCheck.ashx" />
+    <Content Include="carReturn.ashx" />
+    <Content Include="bigscreen.ashx" />
+    <Content Include="h5marker.ashx" />
+    <Content Include="h5login.ashx" />
+    <Content Include="h5carcheck.ashx" />
+    <Content Include="mbManage.ashx" />
+    <Content Include="h5carorderlist.ashx" />
+    <None Include="Properties\PublishProfiles\car.pubxml" />
+    <None Include="Properties\PublishProfiles\cf.pubxml" />
+    <Content Include="trackManage.aspx" />
+    <Content Include="userManager.ashx" />
+    <Content Include="trackManage.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="backup\buttons.html" />
+    <Content Include="backup\calendar.html" />
+    <Content Include="backup\charts.html" />
+    <Content Include="backup\chat.html" />
+    <Content Include="css\bootstrap-responsive.min.css" />
+    <Content Include="css\bootstrap-wysihtml5.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\colorpicker.css" />
+    <Content Include="css\datepicker.css" />
+    <Content Include="css\fullcalendar.css" />
+    <Content Include="css\jquery.gritter.css" />
+    <Content Include="css\matrix-login.css" />
+    <Content Include="css\matrix-media.css" />
+    <Content Include="css\matrix-style.css" />
+    <Content Include="css\select2.css" />
+    <Content Include="css\uniform.css" />
+    <Content Include="backup\dashboard.html" />
+    <Content Include="backup\error403.html" />
+    <Content Include="backup\error404.html" />
+    <Content Include="backup\error405.html" />
+    <Content Include="backup\error500.html" />
+    <Content Include="font-awesome\css\font-awesome.css" />
+    <Content Include="backup\form-common.html" />
+    <Content Include="backup\form-validation.html" />
+    <Content Include="backup\form-wizard.html" />
+    <Content Include="backup\gallery.html" />
+    <Content Include="backup\grid.html" />
+    <Content Include="images\backgrounds\calActiveBg.html" />
+    <Content Include="images\gallery\imgbox3.html" />
+    <Content Include="img\alpha.html" />
+    <Content Include="img\breadcrumb.png" />
+    <Content Include="img\demo\av1.jpg" />
+    <Content Include="img\demo\av2.jpg" />
+    <Content Include="img\demo\av3.jpg" />
+    <Content Include="img\demo\av4.jpg" />
+    <Content Include="img\demo\av5.jpg" />
+    <Content Include="img\demo\demo-image1.jpg" />
+    <Content Include="img\demo\demo-image2.jpg" />
+    <Content Include="img\demo\demo-image3.jpg" />
+    <Content Include="img\demo\envelope.png" />
+    <Content Include="img\gallery\imgbox1.jpg" />
+    <Content Include="img\gallery\imgbox2.jpg" />
+    <Content Include="img\gallery\imgbox3.jpg" />
+    <Content Include="img\gallery\imgbox4.jpg" />
+    <Content Include="img\gallery\imgbox5.jpg" />
+    <Content Include="img\glyphicons-halflings-white.png" />
+    <Content Include="img\glyphicons-halflings.html" />
+    <Content Include="img\gritter.png" />
+    <Content Include="img\hue.png" />
+    <Content Include="img\larrow.png" />
+    <Content Include="img\line.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\menu-active.png" />
+    <Content Include="img\rarrow.png" />
+    <Content Include="img\saturation.png" />
+    <Content Include="img\select2.png" />
+    <Content Include="img\spinner.gif" />
+    <Content Include="img\sprite.png" />
+    <Content Include="backup\index2.html" />
+    <Content Include="backup\interface.html" />
+    <Content Include="backup\invoice.html" />
+    <Content Include="js\bootstrap-colorpicker.js" />
+    <Content Include="js\bootstrap-datepicker.js" />
+    <Content Include="js\bootstrap-wysihtml5.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\excanvas.min.js" />
+    <Content Include="js\fullcalendar.min.js" />
+    <Content Include="js\jquery.dataTables.min.js" />
+    <Content Include="js\jquery.flot.min.js" />
+    <Content Include="js\jquery.flot.pie.min.js" />
+    <Content Include="js\jquery.flot.resize.min.js" />
+    <Content Include="js\jquery.gritter.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.peity.min.js" />
+    <Content Include="js\jquery.toggle.buttons.html" />
+    <Content Include="js\jquery.ui.custom.js" />
+    <Content Include="js\jquery.uniform.js" />
+    <Content Include="js\jquery.validate.js" />
+    <Content Include="js\jquery.wizard.js" />
+    <Content Include="js\maruti.html" />
+    <Content Include="js\masked.js" />
+    <Content Include="js\matrix.calendar.js" />
+    <Content Include="js\matrix.charts.js" />
+    <Content Include="js\matrix.chat.js" />
+    <Content Include="js\matrix.dashboard.js" />
+    <Content Include="js\matrix.form_common.js" />
+    <Content Include="js\matrix.form_validation.js" />
+    <Content Include="js\matrix.interface.js" />
+    <Content Include="js\matrix.js" />
+    <Content Include="js\matrix.login.js" />
+    <Content Include="js\matrix.popover.js" />
+    <Content Include="js\matrix.tables.js" />
+    <Content Include="js\matrix.wizard.js" />
+    <Content Include="js\select2.min.js" />
+    <Content Include="js\wysihtml5-0.3.0.js" />
+    <Content Include="login.html" />
+    <Content Include="backup\tables.html" />
+    <Content Include="userManager.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="backup\widgets.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bigscreen.ashx.cs">
+      <DependentUpon>bigscreen.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="bigscreen.aspx.cs">
+      <DependentUpon>bigscreen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bigscreen.aspx.designer.cs">
+      <DependentUpon>bigscreen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="carCheck.ashx.cs">
+      <DependentUpon>carCheck.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="carCheck.aspx.cs">
+      <DependentUpon>carCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="carCheck.aspx.designer.cs">
+      <DependentUpon>carCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CarException.ashx.cs">
+      <DependentUpon>CarException.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="CarException.aspx.cs">
+      <DependentUpon>CarException.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CarException.aspx.designer.cs">
+      <DependentUpon>CarException.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="carMaintain.ashx.cs">
+      <DependentUpon>carMaintain.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="carMaintain.aspx.cs">
+      <DependentUpon>carMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="carMaintain.aspx.designer.cs">
+      <DependentUpon>carMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="carManage.ashx.cs">
+      <DependentUpon>carManage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="carManage.aspx.cs">
+      <DependentUpon>carManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="carManage.aspx.designer.cs">
+      <DependentUpon>carManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="carMaphistory.aspx.cs">
+      <DependentUpon>carMaphistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="carMaphistory.aspx.designer.cs">
+      <DependentUpon>carMaphistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="carOil.ashx.cs">
+      <DependentUpon>carOil.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="carOil.aspx.cs">
+      <DependentUpon>carOil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="carOil.aspx.designer.cs">
+      <DependentUpon>carOil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="carReturn.ashx.cs">
+      <DependentUpon>carReturn.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="carReturn.aspx.cs">
+      <DependentUpon>carReturn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="carReturn.aspx.designer.cs">
+      <DependentUpon>carReturn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Crc.cs" />
+    <Compile Include="DAL\AsposeCellsTool.cs" />
+    <Compile Include="DAL\CarCheckDAL.cs" />
+    <Compile Include="DAL\CarExceptionDAL.cs" />
+    <Compile Include="DAL\CarGPSInforsDAL.cs" />
+    <Compile Include="DAL\CarMaintainDAL.cs" />
+    <Compile Include="DAL\CarManageDAL.cs" />
+    <Compile Include="DAL\CarOilDAL.cs" />
+    <Compile Include="DAL\CarOrderListDAL.cs" />
+    <Compile Include="DAL\CarReturnDAL.cs" />
+    <Compile Include="DAL\CarTrackDAL.cs" />
+    <Compile Include="DAL\DepManageDAL.cs" />
+    <Compile Include="DAL\GPSIMEIDAL.cs" />
+    <Compile Include="DAL\GPSStatesDAL.cs" />
+    <Compile Include="DAL\MedicineBoxDAL.cs" />
+    <Compile Include="DAL\PersonManageDAL.cs" />
+    <Compile Include="DAL\SqlHelper.cs" />
+    <Compile Include="backup\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backup\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backup\default1.aspx.cs">
+      <DependentUpon>default1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backup\default1.aspx.designer.cs">
+      <DependentUpon>default1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\UserDAL.cs" />
+    <Compile Include="depManage.ashx.cs">
+      <DependentUpon>depManage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="depManage.aspx.cs">
+      <DependentUpon>depManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="depManage.aspx.designer.cs">
+      <DependentUpon>depManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileReadHelper.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="h5carcheck.ashx.cs">
+      <DependentUpon>h5carcheck.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="h5carcheck.aspx.cs">
+      <DependentUpon>h5carcheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="h5carcheck.aspx.designer.cs">
+      <DependentUpon>h5carcheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="h5carmanage.aspx.cs">
+      <DependentUpon>h5carmanage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="h5carmanage.aspx.designer.cs">
+      <DependentUpon>h5carmanage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="h5carorderlist.ashx.cs">
+      <DependentUpon>h5carorderlist.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="h5carorderlist.aspx.cs">
+      <DependentUpon>h5carorderlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="h5carorderlist.aspx.designer.cs">
+      <DependentUpon>h5carorderlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="h5index.aspx.cs">
+      <DependentUpon>h5index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="h5index.aspx.designer.cs">
+      <DependentUpon>h5index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="h5login.ashx.cs">
+      <DependentUpon>h5login.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="h5marker.ashx.cs">
+      <DependentUpon>h5marker.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="HttpClientHelper.cs" />
+    <Compile Include="index.ashx.cs">
+      <DependentUpon>index.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.ashx.cs">
+      <DependentUpon>login.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="map.ashx.cs">
+      <DependentUpon>map.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="map.aspx.cs">
+      <DependentUpon>map.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="map.aspx.designer.cs">
+      <DependentUpon>map.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mapDistance1.cs" />
+    <Compile Include="maphistory.aspx.cs">
+      <DependentUpon>maphistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="maphistory.aspx.designer.cs">
+      <DependentUpon>maphistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mbManage.ashx.cs">
+      <DependentUpon>mbManage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="mbManage.aspx.cs">
+      <DependentUpon>mbManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mbManage.aspx.designer.cs">
+      <DependentUpon>mbManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CarCheck.cs" />
+    <Compile Include="Model\CarException.cs" />
+    <Compile Include="Model\CarGPSInfors.cs" />
+    <Compile Include="Model\CarMaintain.cs" />
+    <Compile Include="Model\CarManage.cs" />
+    <Compile Include="Model\CarOil.cs" />
+    <Compile Include="Model\CarOrderList.cs" />
+    <Compile Include="Model\CarReturn.cs" />
+    <Compile Include="Model\CarTrack.cs" />
+    <Compile Include="Model\DepManage.cs" />
+    <Compile Include="Model\GPSIMEI.cs" />
+    <Compile Include="Model\GPSStates.cs" />
+    <Compile Include="Model\MedicineBox.cs" />
+    <Compile Include="Model\PersonManage.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="MyTcpServer.cs" />
+    <Compile Include="personManage.ashx.cs">
+      <DependentUpon>personManage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="personManage.aspx.cs">
+      <DependentUpon>personManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="personManage.aspx.designer.cs">
+      <DependentUpon>personManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="stations.aspx.cs">
+      <DependentUpon>stations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="stations.aspx.designer.cs">
+      <DependentUpon>stations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test.cs" />
+    <Compile Include="Third\CarInfor.cs" />
+    <Compile Include="Third\CarInforDAL.cs" />
+    <Compile Include="Third\SqlHelper.cs" />
+    <Compile Include="trackManage.ashx.cs">
+      <DependentUpon>trackManage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="trackManage.aspx.cs">
+      <DependentUpon>trackManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="trackManage.aspx.designer.cs">
+      <DependentUpon>trackManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userManager.ashx.cs">
+      <DependentUpon>userManager.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="userManager.aspx.cs">
+      <DependentUpon>userManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userManager.aspx.designer.cs">
+      <DependentUpon>userManager.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57917</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/SmartHome</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

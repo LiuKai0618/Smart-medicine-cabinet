@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>新左旗车辆管理系统</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!--<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />-->
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" href="css/matrix-login.css" />
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+    <div id="loginbox">
+        <form id="loginform" class="form-vertical" action="http://themedesigner.in/demo/matrix-admin/index.html">
+            <div class="control-group normal_text"> <h3><img src="img/logo.png" alt="Logo" /></h3></div>
+            <div class="control-group">
+                <div class="controls">
+                    <div class="main_input_box">
+                        <span class="add-on bg_lg" style="background-color:black;"><i class="icon-user"></i></span><input type="text" id="username" placeholder="请输入用户名" />
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <div class="main_input_box">
+                        <span class="add-on bg_ly" style="background-color:black;"><i class="icon-lock"></i></span><input type="password" id="password" placeholder="请输入密码" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-actions">
+                <!--<span class="pull-left"><button class="flip-link btn btn-info" id="to-recover">忘记密码?</button></span>
+                <span class="pull-right"><button type="submit" id="loginbtn" class="btn btn-success"> 登录</button></span>-->
+                <span class="pull-left"><a href="#" class="flip-link btn btn-info" id="to-recover" style="background-color:black;">忘记密码?</a></span>
+                <span class="pull-right"><a type="submit" href="#" id="loginbtn" class="btn btn-success" style="background-color:black;"> 登录</a></span>
+            </div>
+            <div>
+                <p style="text-align:center;color:#000;">新左旗车辆管理系统</p>
+                <p style="text-align:center;color:#000;">地址：新巴尔虎左旗人民政府  邮编：000000</p>
+                <p style="text-align:center;color:#000;">电话：+86 000 8888888&nbsp;&nbsp;&nbsp;&nbsp;传真：+86 000 8888888</p>
+            </div>
+        </form>
+        <form id="recoverform" action="#" class="form-vertical">
+            <p class="normal_text">请输入您的电子邮箱地址，我们将给您发送指令以便您找回您的密码！</p>
+
+            <div class="controls">
+                <div class="main_input_box">
+                    <span class="add-on bg_lo" style="background-color:black;"><i class="icon-envelope"></i></span><input type="text" placeholder="请输入电子邮箱" />
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <span class="pull-left"><a href="#" class="flip-link btn btn-success" id="to-login" style="background-color:black;">&laquo; 返回到登录页面</a></span>
+                <span class="pull-right"><a class="btn btn-info" style="background-color:black;">找回密码</a></span>
+
+            </div>
+            <div>
+                <p style="text-align:center;color:#000;">新左旗车辆管理系统</p>
+                <p style="text-align:center;color:#000;">地址：新巴尔虎左旗人民政府  邮编：000000</p>
+                <p style="text-align:center;color:#000;">电话：+86 000 8888888&nbsp;&nbsp;&nbsp;&nbsp;传真：+86 000 8888888</p>
+            </div>
+        </form>
+    </div>
+
+    <!--------------------------------------------------------------------------------------------------------------->
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">提示信息</h4>
+                </div>
+                <div class="modal-body">
+                    <!--<h4>模态框中的文本</h4>-->
+                    <p id="jinggaomodel"></p>
+                </div>
+                <!--<div class="modal-footer">-->
+                <!--<button type="button" class="btn btn-default" data-dismiss="modal">确定</button>-->
+                <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+    <!--------------------------------------------------------------------------------------------------------------->
+    <!--------------------------------------------------------------------------------------------------------------->
+    <div id="myModal1" class="modal fade">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">提示信息</h4>
+                </div>
+                <div class="modal-body">
+                    <!--<h4>模态框中的文本</h4>-->
+                    <p id="jinggaomodel1"></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--------------------------------------------------------------------------------------------------------------->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/matrix.login.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <script type="text/javascript">
+            $(function () {
+                var temp1 = "";
+                var temp2 = "";
+                $(document).keydown(function (event) {
+                    if (event.keyCode == 13) {
+                        if ($("#username").val().length > 0) {
+                            temp1 = $("#username").val();
+                        }
+                        if ($("#password").val().length > 0) {
+                            temp2 = $("#password").val();
+                        }
+                        return false;
+                    }
+                });
+                $(document).keyup(function (event) {
+                    if (event.keyCode == 13) {
+                        if (temp1.length > 0) {
+                            $("#username").val(temp1);
+                        }
+                        if (temp2.length > 0) {
+                            $("#password").val(temp2);
+                        }
+
+                        $("#loginbtn").trigger("click");
+                    }
+                });
+
+                $("#loginbtn").click(function () {
+                    var username = $("#username").val();
+                    var password = $("#password").val();
+                    if (username == "") {
+                        $('#jinggaomodel').text('请输入用户名！');
+                        $('#myModal').modal({
+                            backdrop: false,
+                            keyboard: false,
+                            show: true
+
+                        });
+                        setTimeout("$('#myModal').modal('hide')", 1000);
+                        $("#username").focus();
+                        return;
+                    }
+                    if (password == "") {
+                        $('#jinggaomodel').text('请输入密码！');
+                        $('#myModal').modal({
+                            backdrop: false,
+                            keyboard: false,
+                            show: true
+
+                        });
+                        setTimeout("$('#myModal').modal('hide')", 1000);
+                        $("#password").focus();
+                        return;
+                    }
+                    //window.location.href = "index.html";
+
+
+                    //window.location.href = "index.html";
+                    //return;
+                    ////以上为测试使用
+                    //var username = $("#username").val();
+                    //var password = $("#password").val();
+                    //if (password == "null" || password=="") {
+                    //    alert("请输入密码！");
+                    //    return;
+                    //}
+                    $('#jinggaomodel1').text('请耐心等待，正在登录......');
+                    $('#myModal1').modal({
+                        backdrop: false,
+                        keyboard: false,
+                        show: true
+
+                    });
+                    //------------------------------------------------//
+                    //$("#to-recover").attr("disabled", true);
+                    //$("#loginbtn").attr("disabled", true);
+                    //------------------------------------------------//
+                    function jinggao(waringText) {
+                        $('#jinggaomodel').text(waringText);
+                        $('#myModal').modal({
+                            backdrop: false,
+                            keyboard: false,
+                            show: true
+
+                        });
+                    };
+                    //POST和GET根据需要选择一种方式即可
+                    //GET
+                    $.ajax({
+                        type: "GET",
+                        contentType: "application/json;charset=UTF-8",
+                        //url: "/vpbx.cgi?action=login&username=" + username + "&password=" + hex_md5(password),
+                        url: "h5login.ashx?username=" + username + "&password=" + password,
+                        dataType: 'json',
+                        success: function (data) {
+                            if (data.error_key) {
+                                $('#myModal1').modal('hide');
+                                //$("#to-recover").attr("disabled", false);
+                                //$("#loginbtn").attr("disabled", false);
+                                setTimeout(jinggao('用户名或密码不正确！'), 500);
+                                //用户名或密码不正确
+                                //alert(data.error_key);
+                                //$('#jinggaomodel').text('用户名或密码不正确！');
+                                //$('#myModal').modal({
+                                //    backdrop: false,
+                                //    keyboard: false,
+                                //    show: true
+
+                                //});
+                                setTimeout("$('#myModal').modal('hide')", 1000);
+                                $("#username").val("");
+                                $("#password").val("");
+                                $("#username").focus();
+
+
+                            }
+                            else {
+                                //用户名和密码正确
+                                $('#myModal1').modal('hide');
+                                //$("#to-recover").attr("disabled", false);
+                                //$("#loginbtn").attr("disabled", false);
+                                window.location.href = "h5index.aspx";
+                                //alert(data);
+                                //window.location.href = "index.html";
+                            }
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            //$("#to-recover").attr("disabled", false);
+                            //$("#loginbtn").attr("disabled", false);
+                            if (jqXHR.status == 200) {
+                                //alert("error--=200");
+                                //window.location.href = "index.html";
+                            }
+                            else {
+                                //alert("error---!=200");
+                            }
+                        }
+                    });
+                    //POST
+                    //var userinfor = { "action":"login","username": username, "password": password };
+                    //$.ajax({
+                    //    type: "POST",
+                    //    contentType: "application/json;charset=UTF-8",
+                    //    url: "/vpbx.cgi",
+                    //    data: JSON.stringify(userinfor),
+                    //    //data: userinfor,
+                    //    dataType: "json",
+                    //    success: function (data) {
+                    //        //alert(data);
+                    //        if (data.err_message) {
+                    //            alert(data.err_message);
+                    //        }
+                    //        else {
+                    //            window.location.href = "index.html";
+                    //        }
+                    //    },
+                    //    error: function (data) {
+                    //        alert(data.responseText);
+                    //    }
+                    //});
+
+                });
+            });
+    </script>
+</body>
+
+</html>
